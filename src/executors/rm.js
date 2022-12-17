@@ -1,0 +1,3 @@
+const removeFile = () => {};
+
+export { removeFile };

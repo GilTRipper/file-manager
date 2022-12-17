@@ -1,0 +1,2 @@
+const addFile = () => {};
+export { addFile };

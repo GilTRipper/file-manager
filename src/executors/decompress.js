@@ -1,0 +1,2 @@
+const decompress = () => {};
+export { decompress };

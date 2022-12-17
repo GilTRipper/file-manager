@@ -1,0 +1,32 @@
+{
+  "name": "file-manager",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "node.js assignment from RS School 2022Q4",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GilTRipper/file-manager.git"
+  },
+  "keywords": [
+    "file",
+    "file-manager",
+    "manager",
+    "files",
+    "copy",
+    "delete",
+    "create",
+    "node",
+    "node.js",
+    "js"
+  ],
+  "author": "Gil T Ripper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GilTRipper/file-manager/issues"
+  },
+  "homepage": "https://github.com/GilTRipper/file-manager#readme"
+}

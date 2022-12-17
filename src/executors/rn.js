@@ -1,0 +1,3 @@
+const renameFile = () => {};
+
+export { renameFile };

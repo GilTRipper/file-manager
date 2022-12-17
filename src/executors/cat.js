@@ -1,0 +1,2 @@
+const readFile = () => {};
+export { readFile };
