@@ -39,6 +39,7 @@ const createFileManager = async () => {
       await commands[command](args);
     } catch (error) {
       console.log("Operation failed");
+      console.log(error);
     }
 
     console.log(`You are currently in ${process.cwd()}`);
