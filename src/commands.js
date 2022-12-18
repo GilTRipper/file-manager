@@ -15,17 +15,17 @@ import { decompress } from "./executors/decompress.js";
 const commands = {
   ["up"]: () => up(),
   ["cd"]: data => cd(data),
-  ["ls"]: data => ls(data),
-  ["cat"]: data => cat(data),
-  ["add"]: data => add(data),
-  ["rn"]: data => rn(data),
-  ["cp"]: data => cp(data),
-  ["mv"]: data => mv(data),
-  ["rm"]: data => rm(data),
+  ["ls"]: async data => await ls(data),
+  ["cat"]: async data => await cat(data),
+  ["add"]: async data => await add(data),
+  ["rn"]: async data => await rn(data),
+  ["cp"]: async data => await cp(data),
+  ["mv"]: async data => await mv(data),
+  ["rm"]: async data => await rm(data),
   ["os"]: data => os(data),
-  ["hash"]: data => hash(data),
-  ["compress"]: data => compress(data),
-  ["decompress"]: data => decompress(data),
+  ["hash"]: async data => await hash(data),
+  ["compress"]: async data => await compress(data),
+  ["decompress"]: async data => await decompress(data),
 };
 
 export { commands };

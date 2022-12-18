@@ -1,15 +1,22 @@
 import { createBrotliDecompress } from "zlib";
 import { createReadStream, createWriteStream } from "fs";
-import { join } from "path";
 import { pipeline } from "stream/promises";
-import { _getDecompressedFileName } from "../utils.js";
+
+import { _getDecompressedFileName, _generatePath } from "../utils.js";
+import { stat } from "fs/promises";
 
 const decompress = async data => {
   const [archive] = data;
   const filename = _getDecompressedFileName(archive);
 
-  const source = join(process.cwd(), archive);
-  const destination = join(process.cwd(), filename);
+  const source = _generatePath(archive);
+  const destination = _generatePath(filename);
+
+  const isFile = (await stat(archive)).isFile();
+
+  if (!isFile) {
+    throw new Error("e");
+  }
 
   const unzip = createBrotliDecompress();
   const input = createReadStream(source);
